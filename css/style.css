@@ -29,9 +29,20 @@ section {
 }
 
 .video_container {
-  width: 100%;
-  min-height: 600px;
   margin-top: 10px;
+}
+
+#savepic {
+  border: #3d7448 1px solid;
+  background-color: transparent;
+  color: #3d7448;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+#savepic:hover {
+  background-color: #3d7448;
+  color: white;
 }
 
 #tar {
