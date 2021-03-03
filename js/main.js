@@ -7,6 +7,21 @@ navigator.mediaDevices
     video.onloadedmetadata = function (e) {
       video.play()
     }
+    const pauseBtn = document.createElement('button')
+    pauseBtn.classList.add('customBtn')
+    pauseBtn.innerText = 'pause'
+    pauseBtn.addEventListener('click', evt => {
+      if (video.paused) {
+        video.play()
+        evt.target.innerText = 'pause'
+      } else {
+        video.pause()
+        evt.target.innerText = 'jouer'
+      }
+    })
+    document
+      .querySelector('#savepic')
+      .insertAdjacentElement('afterend', pauseBtn)
   })
   .catch(function (err) {
     console.log(`${err.name}: ${err.message}`)
